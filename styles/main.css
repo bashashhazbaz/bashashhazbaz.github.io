@@ -1,0 +1,77 @@
+html, body {width: 100vw; height: auto; align-content: center;}
+main {width: 100%; height: auto}
+
+body {
+    background-size: 100% auto;
+    display: inline-flex-box;
+    /*max-width: 400px;
+    max-height: auto;*/
+    margin: 0;
+    /*font-size: 18px;*/
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px;
+
+}
+
+header, nav, main, footer {
+    margin: 10px auto;
+    /*max-width: 760px;*/
+    max-width: 400px;
+    max-height: auto;
+    color: black;
+    /*text-align: center;*/
+    padding: 2px;
+}
+
+nav {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+nav, footer {
+    font-size: 15px;
+}
+
+header, footer  {
+    background-color: red;
+    color: black;
+    /*text-align: center;*/
+}
+header {
+    display:grid;
+    grid-auto-flow: row;
+    padding: 2px;
+    font-size: 13px;
+}
+img {
+    display: flex;
+    float:left;
+    margin: 10px;
+    padding: 10px;
+    width: 10em;
+    height: auto;
+    
+}
+
+/*footer{
+    content padding-top: 10px;
+}*/
+
+ul {
+    text-align: left;
+}
+/*p img {
+    float:left;
+    margin: 10px;
+    padding:10px;
+    border: 1px solid black;
+}*/
+ 
+/*Rounded corner with shadow*/
+.rcs, .ftr {
+    background-color: red;  
+    border: 1px solid #BBBBBB;
+      border-radius: 0.5em;
+      box-shadow: gray 0.3em 0.3em 0.3em 
+  }

@@ -1,0 +1,97 @@
+body, td {
+    background-color: white;  
+    }
+    /*Rounded corner with shadow*/
+    .rcs {
+      background-color: white;  
+      border: 1px solid #BBBBBB;
+        border-radius: 0.5em;
+        box-shadow: gray 0.3em 0.3em 0.3em 
+    }
+    /*Header*/
+    .rcs .hdr {                        
+        margin:0; 
+        font-size:1.2em; 
+        padding:5px 5px 5px 10px;          
+      border-top-left-radius: 0.35em;
+      border-top-right-radius: 0.35em;
+        border-bottom:1px solid #AAAAAA;
+    }
+    /*footer*/
+    .rcs .ftr {                        
+        margin:0; 
+        font-size:1.2em; 
+        padding:5px 5px 5px 10px;
+        position: absolute; 
+        bottom: 0px;
+        width: 100%;          
+      border-bottom-left-radius: 0.35em;
+      border-bottom-right-radius: 0.35em;
+        border-top:1px solid #AAAAAA;
+    }
+    /*content*/
+    .rcs .cnt {
+        padding: 5px 5px 5px 10px;    
+        font-family: Verdana, Helvetica, sans-serif;
+        font-size: 12px;
+    }
+    /*Color scheme*/
+    .color_a {
+        background:#BBBBBB;
+        font-family: Verdana, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        color:#000;
+    }
+
+    /*body, td {
+background-color: white;  
+}
+/*Rounded corner with shadow*/
+.rcs {
+  background-color: white;  
+  border: 1px solid #BBBBBB;
+    border-radius: 0.5em;
+    box-shadow: gray 0.3em 0.3em 0.3em 
+}
+/*Header*/
+.rcs .hdr {                        
+    margin:0; 
+    font-size:1.2em; 
+    padding:5px 5px 5px 10px;          
+  border-top-left-radius: 0.35em;
+  border-top-right-radius: 0.35em;
+    border-bottom:1px solid #AAAAAA;
+}
+/*footer*/
+.rcs .ftr {                        
+    margin:110px 0 0 0; 
+    font-size:1.2em; 
+    padding:5px 0px 5px 10px;        
+  border-bottom-left-radius: 0.35em;
+  border-bottom-right-radius: 0.35em;
+    border-top:1px solid #AAAAAA;
+}
+/*content*/
+.rcs .cnt {
+    padding: 5px 5px 5px 10px;    
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+}
+/*Color scheme*/
+.color_a {
+    background:#BBBBBB;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color:#000;
+}
+
+/*.rcs .ftr {                        
+    margin:110px 0 0 0; 
+    font-size:1.2em; 
+    padding:5px 0px 5px 10px;        
+    border-bottom-left-radius: 0.35em;
+    border-bottom-right-radius: 0.35em;
+    border-top:1px solid #AAAAAA;
+}*/

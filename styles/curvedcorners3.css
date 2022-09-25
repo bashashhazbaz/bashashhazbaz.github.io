@@ -1,0 +1,12 @@
+/*footer*/
+.rcs .ftr {                        
+    margin:0; 
+    font-size:1.2em; 
+    padding:5px 5px 5px 10px;
+    position: absolute; 
+    bottom: 0px;
+    width: 385px;          
+  border-bottom-left-radius: 0.35em;
+  border-bottom-right-radius: 0.35em;
+    border-top:1px solid #AAAAAA;
+}
