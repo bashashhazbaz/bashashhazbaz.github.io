@@ -44,6 +44,54 @@ const fulldateUK = new Intl.DateTimeFormat("en-UK", {
 //datefield.innerHTML = `<em>${fulldate}</em>`;
 datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
 
+//var banner = weekday; 
+// {/
+
+//var weekday = [
+  //"Sunday",
+  //"Monday",
+  //"Tuesday",
+  //"Wednesday",
+  //"Thursday",
+  //"Friday",
+  //"Saturday"
+//]
+//var banner = weekday[now.getDay()];
+
+//function checkValue(banner) {
+  //if (weekday === "Monday","Tuesday")
+    //if (b === 2)
+      //console.log("a is 1 and b is 2");
+    //else
+      //console.log("a is not 1");
+//}
+
+//if (day == "Monday","Tuesday") {
+	//document.writeln("<h2>Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</h2>");
+  //} 
+  //else if (day == "Tuesday"){
+	//document.writeln("<h2>Monday</h2>");
+  //}
+   //else {
+	//document.writeln("<h2>n</h2>");
+
+//}
+
+const d = new Date();
+let day = d.getDay()
+
+if (day === 1) {
+    document.getElementById("banner").style.display = "";
+}
+else if (day === 2) {
+    document.getElementById("banner").style.display = "";
+}
+else {
+    document.getElementById("banner").style.display = "none";
+}
+
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 
 
 const date = document.querySelector("#currentyr");

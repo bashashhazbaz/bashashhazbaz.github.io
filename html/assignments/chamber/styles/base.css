@@ -6,6 +6,9 @@
 }
 
 body {
+	display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / auto 1fr auto;
 	font-size: 16px;
 	font-family: 'Merriweather', serif;
 }
@@ -13,10 +16,12 @@ header,
 footer {
 	background-color: #ccbb66;
 	padding: .75rem;
+	grid-column: 1 / 4;
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 900px;
+	/*max-width: 900px;*/
 	margin: 0 auto;
 	/*flex-flow: column;*/
 	/*align-items: center;*/
@@ -26,7 +31,7 @@ footer {
 	
 }
 
-.date,
+.date, .sidebar, 
 aside {
 	margin: 0.5rem;
 	border: 1px solid #bbb;
@@ -124,7 +129,7 @@ footer {
 h1 {
 	font-size: 1.1rem;
 }
-h1, h2, header, footer {
+h1, h2, header, footer, {
 	color: black;
 	font-style: italic;
 }
@@ -211,12 +216,28 @@ nav ul li a {
 .active {
 	color: yellow;
 }
+
+.banner {
+	position: relative;
+	display: block;
+	clear: both;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+
+}
+
+.banner img {
+	display: block;
+
+}
+
 main {
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-column: 1 / 4;
 	font-size: 0.8rem;
 }
-main p {
+main p, /*.spotlight*/ {
 	margin: 1rem;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	padding: 1rem;
@@ -229,6 +250,19 @@ main picture {
 	display: none;
 	margin: 1rem;
 }
+
+.left-sidebar {
+	grid-column: 1 / 2;
+}
+
+.main {
+	grid-column: 2 / 3;
+}
+
+.right-sidebar {
+	grid-column: 3 / 4;
+}
+
 
 footer p {
 	padding: .5rem;
