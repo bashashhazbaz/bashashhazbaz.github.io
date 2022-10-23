@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>McBaine, MO COC wireframe for WDD 230</title>
     <meta name="description" content="This is the home page of the McBaine, MO COC, which shows updates on the Big Tree, the Katy Trail, the Missouri River and all things related to McBaine">
-    <link rel="shortcut icon" href="/mcbaine/favicon.ico">
+    <link rel="shortcut icon" href="/mcbaine/favicon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
     <header>
         <div class="logo">
         <picture>
-            <img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.jpg" class="logo";>
+            <img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.webp" class="logo";>
         </picture>
         <section class="headings"></section>
         <h1>McBaine, MO</h1>
@@ -76,14 +76,59 @@
     <aside></aside>
     </header>
 <main>
-    <p>Hero Image<picture><img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.jpg"  alt="Burr Oak Acorn"></pictiure>
+    <p>Hero Image<picture><img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.webp"  alt="Burr Oak Acorn"></pictiure>
     </p>
     <div class="left-sidebar">
-    <p><a class="weatherwidget-io" href="https://forecast7.com/en/38d89n92d45/mcbaine/?unit=us" data-label_1="MCBAINE" data-label_2="WEATHER" data-theme="original" >MCBAINE WEATHER</a></p>
+        <!--div class="container">
+			<div class="text-center">
+				<h1 class="currentLocation"></h1>
+				<p class="currentTemperature" style="font-size: 1.5em"></p>
+				<a class="btn btn-lg btn-default btn-celsius">Get Celsius Temp</a>
+				<a class="btn btn-lg btn-default btn-fahrenheit">Get Fahrenheit Temp</a>
+			</div>
+		</div>
+        <div-->
+
+            <div class="container-fluid">
+                <section class="main">
+                  <section class="inputs">
+                    <input type="text" placeholder="Enter any city..." id="cityinput" />
+                    <input type="submit" value="Submit" id="add" />
+                    <button placeholder="submit" id="add"></button>
+                  </section>
+           
+                  <section class="display">
+                    <div class="wrapper">
+                      <h2 id="cityoutput"></h2>
+                      <p id="description"></p>
+                      <p id="temp"></p>
+                      <p id="wind"></p>
+                      <p id="windchill"></p>
+                    </div>
+                  </section>
+                </section>
+              </div>
+
+            <p class="weather" MCBAINE WEATHER>
+            <!--a class="weatherwidget-io" <href="https://forecast7.com/en/38d89n92d45/mcbaine/?unit=us"data-label_1="MCBAINE"data-label_2="WEATHER"data-theme="original">MCBAINE WEATHER</a-->
+            <picture><img src="/mcbaine/icons/Weather-Chance-Of-Storm-icon.webp"></picture>
+            <div><a class="getWeather"></a>73°F</div>
+            <div>Partly weather-ish</div>
+            <div>Wind speed:  </div>
+            <div>Wind chill:  </div>
+            </p>
+        </div>
     <p>Join</p>
     </div>
     <div class="main">
-    <p>Call to Action</p>
+    <div>Call to action
+    <p><picture class="photoB">
+        <source media="(max-width: 400px" srcset="/images/wdd230-org-200.webp">
+        <source media="(max-width: 1000px" srcset="/images/wdd230-org-500.webp">
+        <source media="(max-width: 1600px" srcset="/images/wdd230-org-800.webp">
+        <img src="/images/wdd230-org-1100.webp" alt="church"></p></picture>
+</div>
+
     <p><h3>News</h3>Ipsom Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, totam dignissimos inven?</p>    
     <p><h3>Events</h3></p>
     </div>
@@ -96,7 +141,7 @@
 <footer>
     <div class="logo">
         <picture>
-            <img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.jpg" class="logo";>
+            <img src="/mcbaine/pexels-hanna-plants-10700017-burr-oak-acorn-logo.webp" class="logo";>
         </picture> |
         <span> &copy;<span id="currentyr"></span>
         <span>McBaine, MO COC</span> |
