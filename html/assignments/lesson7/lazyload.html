@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W07 Prepare Activity: Progressive Loading of Images</title>
+    <link href="/html/assignments/lesson7/lazyload.css" rel="stylesheet">
+</head>
+<body>
+    <main class="content-box">
+    <div><h1>W07 Prepare Activity: Progressive Loading of Images</h1></div>
+    <!--picture><img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" loading="lazy" /></picture-->
+    <picture><img class="" src="/images/pic1.webp" alt="pic1" data-srcset="/images/pic1.webp" alt="pic1" tr=w-300,h-400></picture>
+    <picture><img class="" src="/images/pic2.webp" alt="pic2" data-srcset="/images/pic2.webp" alt="pic2" tr=w-300,h-400></picture>
+    <picture><img class="lazy" data-src="/images/pic3.webp" alt="pic3" data-srcset="/images/pic3.webp" alt="pic3" tr=w-300,h-400></picture>
+    <picture><img class="lazy" data-src="/images/pic4.1.webp" alt="pic4" data-srcset="/images/pic4.1.webp" alt="pic4" tr=w-300,h-400></picture>
+    <picture><img class="lazy" data-src="/images/pic5.webp" alt="pic5" data-srcset="/images/pic5.webp" alt="pic5" tr=w-300,h-400></picture>
+    </main>
+</body>
+<script src="/html/assignments/lesson7/lazyload.js"></script>
+</html>
