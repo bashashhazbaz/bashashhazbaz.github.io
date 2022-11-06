@@ -23,7 +23,7 @@
 
 
     
-<body translate="no" >
+<body translate="no" onload="">
     <header>
         <div class="logo">
         <picture>
@@ -81,26 +81,138 @@
     
     
     
-    <main id="main">
+    <main id="form">
+        <h1 id="member">New Chamber Membership Investment Form</h1>
+          <form id="form1" runat="server" method="get" action="/html/assignments/lesson8/thankyou.html">
+            
+            <fieldset>
+                
+                <legend>Select An Option</legend>
+                
+                <span class="ml">Membership Level</span>
+                
+                <label class="sbs"><input type="radio" name="audience" value="np">   NP Membership</label>
+                <p class="np">Non-Profit Organizations have no annual fee.</p>
+                
+                <span id="fee">Annual fee starting at $200.00/year</span>
+                
+                <label class="sbs"><input type="radio" name="audience" value="beginner">   Bronze Membership</label>
+                <p class="bronze">Bronze Membership Benefits:</p>
+                    <ul>
+                        <li>Free Advertising on Chamber Page</li>
+                    </ul>
+                
+                <label class="sbs"><input type="radio" name="audience" value="intermediate">   Silver Membership</label>
+                <p class="silver">Silver Membership Benefits:</p>
+                    <ul>
+                        <li>Free Advertising on Chamber Page</li>
+                        <li>Training Sessions</li>
+                    </ul>
+                
+                <label class="sbs"><input type="radio" name="audience" value="advanced">   Gold Membership</label>
+                <p class="gold">Gold Membership Benefits:</p>
+                    <ul>
+                        <li>Free Advertising on Chamber Page</li>
+                        <li>Training Sessions</li>
+                        <li>30% Discount on Chamber Events</li>
+                    </ul>
+                
+                        <table>
+                          <caption>McBaine Chamber of Commerce</caption>
+                          <thead>
+                              <tr>
+                                  <th colspan="2" scope="colgroup">Investment Membership Levels</th>
+                              </tr>
+                              <tr>
+                                  <th scope="col">Membership Options</th>
+                                  <th scope="col">Annual Cost</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>NP</td>
+                                  <td>NO COST</td>
+                              </tr>
+                              <tr>
+                                  <td>Bronze</td>
+                                  <td class="highlight">$200.00/yr</td>
+                              </tr>
+                              <tr>
+                                  <td>Silver</td>
+                                  <td>$300.00/yr</td>
+                      
+                              </tr>
+                              <tr>
+                                  <td>Gold</td>
+                                  <td>$400.00/yr</td>
+                              </tr>
+                          </tbody>
+                      </table>
 
-    <div class="wrapper">
-    <div class="one">pic 1</div>
-    <div class="two">pic 2</div>
-    <div class="three"></div>
-    <div class="four">pic 3</div>
-    <div class="five">pic 4</div>
-    <div class="six">pic 5</div>
-    <div class="seven">pic 6</div>
-    <div class="eight">pic 7</div>
-    <div class="nine">pic 8</div>
-  </div>
+
+                <!--div>Software Needed</div>
+                <label class="sbs"><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+                <label class="sbs"><input type="checkbox" name="code" value="yes">Coding</label>
+                <label class="sbs"><input type="checkbox" name="process" value="yes">Preprocessor</label>
+                <label class="sbs"><input type="checkbox" name="client" value="yes">FTP Client</label-->  
+            </fieldset>
+
+            <fieldset>
+                <legend>Member Information</legend>
+                <label class="top">Business Name*<input type="text" name="fname" required></label>
+                <label class="top">Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Website<input type="url" name="url" placeholder="https://"></label>
+                <label class="top">Business Description<!--input type="text" name="text" ></label-->
+                <textarea id="freeform" name="freeform" rows="4" cols="50" maxlength="200"></textarea></label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Primary Contact</legend>
+                <label class="top">First Name*<input type="text" name="fname" required></label>
+                <label class="top">Last Name*<input type="text" name="lname" required></label>
+                <label class="top">Business Title*<input type="text" name="title" required></label>
+                <label class="top">Primary Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Website<input type="url" name="url" placeholder="https://"></label>
+            </fieldset>
+            
     
+            <!--fieldset>
+                <legend>Funding</legend>
+                <label class="top">Anticipated Completion Date <input type="date" name="completedDate"></label>
+                <label class="top">Course Subject
+                    <select name="subject">
+                        <option value="">Please Select &#9662;</option>
+                        <option value="software">Software Development</option>
+                        <option value="creative">Creative Professional</option>
+                        <option value="info">Information Technology</option>
+                        <option value="data">Data Professional</option>
+                        <option value="construction">Construction</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="business">Business Professional</option>
+                        <option value="security">Cyber Security</option>
+                    </select>
+                </label>
     
+                <label class="top">How Many Authors <input type="number" name="authors"></label>
+                <label>
+            </fieldset-->
+            <span>
+                <asp:HiddenField ID="HiddenField1" runat="server" />
+                <span id="clienttime"></span>
+                <asp:TextBox ID="TextBox1" runat="server" Width="700px"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" OnClientClick="setTime();" />
+            </span>
+
+            <input type="submit" value="Join Now" class="submitBtn">
     
+          </form>  
     
-  
-  
-</main>
+              
+            
+        </main>
     
 <footer>
     <section class="logo">

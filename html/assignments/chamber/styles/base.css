@@ -1,14 +1,22 @@
-* {
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; /*}
+
+
+/** {*/
 	padding: 0;
 	margin: 0;
-	/*padding: 0;*/
-	box-sizing: border-box;
+	/*padding: 0;
+	box-sizing: border-box;*/
 }
 
 body {
-	display: grid;
+	display: block;
+	/*display: grid;
     height: 100vh;
-    grid-template: auto 1fr auto / auto 1fr auto;
+    grid-template: auto 1fr auto / auto 1fr auto;*/
 	font-size: 16px;
 	font-family: 'Merriweather', serif;
 }
@@ -134,12 +142,18 @@ h1, h2, header, footer, {
 	font-style: italic;
 }
 nav {
+	width: 100%;
+	/*margin: 0 0 1em 0;*/
+	padding: 0 2%;
 	background-color: #ccbb66;
-	margin: 0 auto;
-	max-width: 780px;
+	margin: 0 2%;
+	/*max-width: 100%;*/
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 nav ul {
+	/*list-style: none;*/
+	margin: 0 auto;
+	padding: 0;
 	list-style-type: none;
 	overflow: hidden;
 }
@@ -150,6 +164,7 @@ nav ul li a {
 	padding: 0.75rem;
 	text-decoration: none;
 	font-size: 0.95rem;
+	font-weight: bold;
 	background: linear-gradient(90deg, transparent, yellow, transparent) bottom /
 		var(--d, 0) 3px no-repeat;
 	transition: 0.5s;
@@ -235,8 +250,21 @@ main {
 	/*display: grid;
 	grid-template-columns: 1fr;
 	grid-column: 1 / 4;*/
+	padding: 0 2%;
+    min-height: 20rem;
 	font-size: 0.8rem;
 }
+
+#main {
+	display: grid;
+    height: 100vh;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+#form {
+	display: block;
+}
+
 
 div {
 	border: solid;
@@ -386,6 +414,177 @@ main picture {
 	grid-column: 3 / 4;
 }*/
 
+/*----------- FORM ----------------*/
+form fieldset {
+    margin: 2rem 0;
+    border: 1px solid #9c2c13;
+    border-radius: 10px;
+    padding: .5rem 2%;
+}
+
+form legend {
+	color: #645610;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: #9c2c13;
+    font-size: .8rem;
+}
+
+form label.top input, form label.top select, form label.top textarea {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: #e0d289;
+
+}
+
+.ml {
+	margin: 10px 0 10px 0;
+}
+
+form label.sbs {
+    display: block;
+    padding: 2.5rem 0 .1rem 0;  
+    color: #555;
+	font-size: 1.75em;
+}
+
+
+form input.submitBtn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 96%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+#member {
+	font-size: 3em;
+}
+
+ul, li {
+	padding: .05rem;
+    margin: 0 0 5px 5%;
+	text: bold;
+}
+
+#fee {
+	padding: .05rem;
+    margin: 0 0 5px 0;
+	text-align: center;
+	justify-content: center;
+	align-content: center;
+}
+ 
+.ml, #fee {
+	font-size: 2.5em;
+}
+
+.np, .bronze, .silver, .gold {
+	border-radius: 10px;
+}
+
+.np {
+	background-color: #009A44;
+}
+
+.bronze {
+	background-color: #967444;
+}
+
+.silver {
+	background-color: #C0C0C0;
+}
+
+.gold {
+	background-color: #DA9100;
+}
+ 
+form textarea {
+	box-sizing: content-box;
+	border-radius: 10px;
+}
+
+:root {
+	--back: rgba(173, 164, 29, 0.78);
+  --back2: rgba(212, 174, 4, 0.78);
+  --foredark: rgba(126, 117, 1, 0.71);
+	--forelight: hsla(0,0%,100%,1);
+	--border: hsl(0,0%,20%);
+	--borderlight: hsl(0,0%,33%);
+	--shadow: hsl(0,0%,50%);
+	--zebra: hsl(0, 0%, 93%, 1);
+}
+
+table {
+	margin: 10px auto;
+	border: thin solid var(--border);
+	box-shadow: 0 0 30px var(--shadow);
+	border-collapse: collapse;
+}
+
+caption {
+  padding: 10px;
+  caption-side: bottom;
+	color: var(--foredark);
+	font-size: .85rem;
+}
+
+tr:first-child th, .highlight {
+	background-color: var(--back);
+	color: var(--forelight);
+}
+
+th, td {
+	padding: 7px 15px;
+	border: 1px solid var(--borderlight);
+}
+
+th {
+	background-color: var(--back2);
+}
+
+td {
+	text-align: center;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--zebra);
+}
+
+.thanks {
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+}
+
+.thanks h1 {
+	font-size: xx-large;
+	padding: 3rem;
+}
 
 footer p {
 	padding: .5rem;

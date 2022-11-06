@@ -43,6 +43,8 @@ const fulldateUK = new Intl.DateTimeFormat("en-UK", {
 //datefield.innerHTML = `<em>${fulldate}</em>`;
 datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
 
+
+
 //var banner = weekday; 
 // {/
 
@@ -124,7 +126,8 @@ try {
 }
 
 document.getElementById('modify').innerHTML = document.lastModified
-
+document.getElementById("TextBox1").value=str;
+document.getElementById("HiddenField1").value=str;
 
 //function getWeather(position, callback) {
   //var lat = position.coords.latitude;
