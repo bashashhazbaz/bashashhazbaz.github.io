@@ -1,4 +1,4 @@
-const requestURL = 'https://byui-cit230.github.io/lessons/lesson-09/data/latter-day-prophets.json';
+const requestURL = 'https://github.com/bashashhazbaz/bashashhazbaz.github.io/blob/main/html/assignments/lesson9/data.json';
 const cards = document.querySelector('.cards');
 
 async function getBusiness() {
