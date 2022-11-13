@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - User Layout View Changes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  
+  
+  
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	margin: 0 auto;
+	border: 1px solid #bbb;
+	padding: 0.5rem;
+	max-width: 700px;
+	background-color: #eee;
+	font-family: "Caveat", cursive;
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bbb;
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+}
+
+article,
+section {
+	margin: 0.75rem;
+}
+
+section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #ccc;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: flex;
+	align-items: center;
+}
+
+.grid section {
+	flex-direction: column;
+	text-align: center;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.list section {
+	flex-direction: row;
+	justify-content: left;
+}
+
+.list section > * {
+	margin: 0 1rem;
+	text-align: left;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.9rem;
+}
+
+img {
+	height: 75px;
+	max-width: 100%; /* Images are jerks - Seattle*/
+}
+
+@media (min-width: 700px) {
+	.list section img {
+		display: block;
+	}
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <main>
+	<div class="menu">
+		<button id="grid">Grid</button>
+		<button id="list">List</button>
+	</div>
+	<hr>
+	<article class="grid">
+		<section>
+			<img src="https://assets.ldscdn.org/c8/b5/c8b5e860a7edbbef90734c83be366e8d359d2c0b/payson_utah_temple.jpg" alt="Payson Utah Temple" />
+			<h3>Payson Utah</h3>
+			<p>2015</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/payson-utah-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/c6/07/c6077e1778bfdf5a91569ab3acf57e9c31a7175f/boise_idaho_temple_sunshine.jpeg" alt="Boise Idaho Temple" />
+			<h3>Boise Idaho</h3>
+			<p>1984</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/boise-idaho-temple?lang=eng" target="_blank">Details
+			</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/50/07/5007990b50105c9234b5608dbe7137e09ab201c9/spokane_washington_temple_lds.jpeg" alt="Spokane Washington Temple" />
+			<h3>Spokane Washington</h3>
+			<p>1999</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/spokane-washington-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/83/16/831688ef82fcab202e941ed8fd5869b28f9b5db11086883/oakland_california_temple_exterior.jpeg" alt="Oakland California Temple" />
+			<h3>Oakland California</h3>
+			<p>1964</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/oakland-california-temple?lang=eng" target="_blank">Details </a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/72/14/7214efb047426ffe6b581906fa0092a624ebc637/seattle_washington_temple_exterior.jpg" alt="Seattle Washington Temple" />
+			<h3>Seattle Washington</h3>
+			<p>1980</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/seattle-washington-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/2c/77/2c77d5fd39c0646e0122b1a1472f1d538aa3aa7e/portland_oregon_temple.jpeg" alt="Portland Oregon Temple" />
+			<h3>Portland Oregon</h3>
+			<p>1989</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/portland-oregon-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/2c/77/2c77d5fd39c0646e0122b1a1472f1d538aa3aa7e/portland_oregon_temple.jpeg" alt="Portland Oregon Temple" />
+			<h3>Portland Oregon</h3>
+			<p>1989</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/portland-oregon-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/e5/54/e5546a3599c023ba83a4d751fb6fc196b5ab6ada/jordan_river_temple_exterior_images.jpeg" alt="Jordan River Utah" />
+			<h3>Jordan River Utah</h3>
+			<p>1981</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/jordan-river-utah-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/77/eb/77eb82391ad1795a117b25ee3deaf2a4d229311a/provo_temple_lds.jpg" alt="Portland Oregon Temple" />
+			<h3>Provo Utah</h3>
+			<p>1972</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/provo-utah-temple?lang=eng" target="_blank">Details</a>
+		</section>
+
+		<section>
+			<img src="https://assets.ldscdn.org/57/18/5718c8b9c5a103646c0bd22554cb268b88986f05/provo_city_center_temple_exterior.jpg" alt="Provo City Center Temple" />
+			<h3>Provo City Center</h3>
+			<p>2016</p>
+			<a href="https://www.churchofjesuschrist.org/temples/details/provo-city-center-temple?lang=eng" target="_blank">Details</a>
+		</section>
+	</article>
+</main>
+  
+  
+      <script id="rendered-js" >
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("article");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
+    </script>
+
+  
+
+</body>
+
+</html>

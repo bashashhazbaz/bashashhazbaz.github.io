@@ -33,6 +33,10 @@
 		font-size: 0.9rem;
 	}
 
+	.list section img {
+		display: block;
+	}
+
 	img.logo {
 		/* (A) RESPONSIVE LOGO */
 		width: 4rem;

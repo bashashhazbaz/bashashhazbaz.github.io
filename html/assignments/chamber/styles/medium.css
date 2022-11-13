@@ -5,6 +5,10 @@
 		font-size: 1.5rem;
 	}
 
+	.list section img {
+		display: block;
+	}
+
 	/* Horizontal Menu Examples */
 	/* Flex *********************/
   /*	nav ul { display: flex; }
