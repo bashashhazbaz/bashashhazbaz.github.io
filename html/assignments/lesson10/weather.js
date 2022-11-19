@@ -33,7 +33,8 @@ function capitalize(string) {
 //display the results
 function displayResults(data) {
     temperature.textContent = data.main.temp.toFixed(0);
-    let desc = capitalize(data.weather[0]).description;
+    let desc = capitalize(data.weather[0].description);
+    //let desc = capitalize(data.weather[0]).description;
     description.textContent = desc;
     caption.textContent = `Icon of current weather condition at McBaine which is ${desc}`;
     weathericon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
