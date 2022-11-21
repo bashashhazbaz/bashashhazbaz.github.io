@@ -6,7 +6,7 @@
         "phone": "573-WRECKED (573-973-2533)",
         "website": "www.parkedandwrecks.com",
         "membership": "Gold",
-        "imageurl": "/images/wreck.webp",
+        "imageurl": "/images/wreck.webp"
       },
       {
         "name": "Don't Leaf Me Alone Art Studio",
@@ -14,7 +14,7 @@
         "phone": "573-202-5206",
         "website": "www.dontleafmealone.com",
         "membership": "Silver",
-        "imageurl": "/images/leaf.webp",
+        "imageurl": "/images/leaf.webp"
       },
       {
         "name": "Bare Dirt Topsoil",
@@ -22,7 +22,7 @@
         "phone": "573-TOP-DIRT (573-867-3478)",
         "website": "www.baredirt.com",
         "membership": "Gold",
-        "imageurl": "/images/dirt/webp",
+        "imageurl": "/images/dirt/webp"
       },
       {
         "name": "The Outhouse: Water Treatment Plant",
@@ -30,7 +30,7 @@
         "phone": "573-478-2222",
         "website": "www.watertreatment.com",
         "membership": "Gold",
-        "imageurl": "/images/water.webp",
+        "imageurl": "/images/water.webp"
       },
       {
         "name": "Up the 'Crick'- Discount Outdoor Supplies",
@@ -38,7 +38,7 @@
         "phone": "573-871-1478",
         "website": "www.upthecrick.com",
         "membership": "Bronze",
-        "imageurl": "/images/canoe.webp",
+        "imageurl": "/images/canoe.webp"
       },
       {
         "name": "Tough Nut Tree Nursery",
@@ -46,7 +46,7 @@
         "phone": "573-512-1470",
         "website": "www.toughnuttrees.com",
         "membership": "Silver",
-        "imageurl": "/images/tree.webp",
+        "imageurl": "/images/tree.webp"
       },
       {
         "name": "History Nut Society",
@@ -54,7 +54,7 @@
         "phone": "573-369-6547",
         "website": "www.history-nut.org",
         "membership": "Blue",
-        "imageurl": "/images/acorn.webp",
+        "imageurl": "/images/acorn.webp"
       },
       {
         "name": "Bottomlands Insurance",
@@ -62,7 +62,7 @@
         "phone": "573-429-9812",
         "website": "www.bottomlandsinsurance.com",
         "membership": "Bronze",
-        "imageurl": "/images/river.webp",
+        "imageurl": "/images/river.webp"
       },
       {
         "name": "The Village Urge: Bed and Breakfast",
@@ -70,7 +70,7 @@
         "phone": "573-547-6904",
         "website": "www.villageurge.com",
         "membership": "Silver",
-        "imageurl": "/images/cottage.webp",
+        "imageurl": "/images/cottage.webp"
       }
     ]
   }

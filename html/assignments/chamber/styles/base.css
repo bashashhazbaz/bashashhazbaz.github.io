@@ -39,7 +39,7 @@ footer {
 	
 }
 
-.date, /*.sidebar*/, 
+.date, /*.sidebar*/ 
 aside {
 	margin: 0.5rem;
 	border: 1px solid #bbb;
@@ -137,7 +137,7 @@ footer {
 h1 {
 	font-size: 1.1rem;
 }
-h1, h2, header, footer, {
+h1, h2, header, footer {
 	color: black;
 	font-style: italic;
 }
@@ -258,6 +258,12 @@ main {
 	font-size: 0.8rem;
 }
 
+.content-box {
+    align-items: center;
+    justify-content: center;
+
+  }
+
 #main {
 	display: grid;
     height: 100vh;
@@ -305,7 +311,7 @@ div {
 	grid-row: 3;
 	margin: .5em;
   }
-main p, /*.spotlight*/ {
+main p /*.spotlight*/ {
 	margin: 1rem;
 	/*border: 1px solid rgba(0, 0, 0, 0.2);*/
 	padding: 1rem;
@@ -327,6 +333,30 @@ main picture {
 	box-sizing: border-box;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	display: flex;
+}*/
+
+main figure.myphoto {
+    width: 50%;
+    /*border: 1px red dashed;*/
+    margin: 0 0 0 2%;
+    float: right;
+}
+main figure.myphoto img {width: 100%}
+main figure.myphoto figcaption {text-align: center; font-size: .75rem;}
+
+
+picture.photoA {
+    display: block;
+    width: 96%;
+    margin: 0 2%;
+}
+
+main picture.photoA img, main picture.photoB img {width: 100%;}
+
+main picture.photoA div, main picture.photoB div {
+    text-align: center;
+    font-weight: 500;
+    color: #d0aa94;
 }
 
 /* --------------------background */
@@ -566,7 +596,7 @@ form label.top input:required:valid {
 ul, li {
 	padding: .05rem;
     margin: 0 0 5px 5%;
-	text: bold;
+	font-weight: bold;
 }
 
 #fee {
@@ -740,3 +770,10 @@ footer p {
 		grid-column: span 1;
 	}
 }*/
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+  }

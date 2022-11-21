@@ -223,6 +223,12 @@ main {
 	font-size: 0.8rem;
 }
 
+.content-box {
+    align-items: center;
+    justify-content: center;
+
+  }
+
 #main {
 	display: grid;
     height: 100vh;
@@ -354,6 +360,32 @@ main picture {
 	border: none;
 	border-radius: 2px;
   }
+
+  main figure.myphoto {
+    width: 50%;
+    /*border: 1px red dashed;*/
+    margin: 0 0 0 2%;
+    float: right;
+}
+main figure.myphoto img {width: 100%}
+main figure.myphoto figcaption {text-align: center; font-size: .75rem;}
+
+
+picture.photoA {
+    display: block;
+    width: 96%;
+    margin: 0 2%;
+}
+
+main picture.photoA img, main picture.photoB img {width: 100%;}
+
+main picture.photoA div, main picture.photoB div {
+    text-align: center;
+    font-weight: 500;
+    color: #d0aa94;
+}
+
+
 
   /* -------------------------------display */
   .display {
@@ -784,5 +816,9 @@ footer {
     padding: 0 2%;
 }
 }
-
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
  

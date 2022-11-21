@@ -79,7 +79,7 @@
     <aside></aside>
     </header>
 <main id="form">
-
+<div class="clear-fix">
     <div class="container">
         <h1>Simple multicol example</h1>
 
@@ -108,21 +108,37 @@
               </p>
             </div>
 
-            <div class="card">
-                <p>Hero Image<picture class="photoB">
+            <div class="content-box">
+                <!--p>Hero Image<picture class="photoB">
                         <source media="(max-width: 400px" srcset="/images/mcbaine2-org-200.webp">
                         <source media="(max-width: 1000px" srcset="/images/mcbaine2-org-500.webp">
                         <source media="(max-width: 1600px" srcset="/images/mcbaine2-org-800.webp">
                         <img src="/images/mcbain2-org-1200.webp" alt="Burr Oak Acorns"></picture>
-                </p>
+                </p-->
+
+                <picture class="photoA">
+                    <source media="max-width: 400px" srcset="/images/mcbain2-org-200.webp">
+                    <source media="max-width: 1000px" srcset="/images/mcbain2-org-500.webp">
+                    <source media="max-width: 1600px" srcset="/images/mcbain2-org-800.webp">
+                    <img class="lazy" img src="/images/mcbain2-1200.webp" alt="Burr Oak Acorns"tr=w-300,h-400>
+                    </picture>
+
+
                 <!--div class="main"-->
-                    <p>Call to action
+                    <!--p>Call to action
                     <p><picture class="photoB">
                         <source media="(max-width: 400px" srcset="/images/mcbaine3-org-200.webp">
                         <source media="(max-width: 1000px" srcset="/images/mcbaine3-org-500.webp">
                         <source media="(max-width: 1600px" srcset="/images/mcbaine3-org-800.webp">
                         <img src="/images/mcbaine3-org-1200.webp" alt="McBain Burr Oak"></p></picture>
-                    </p>
+                    </p-->
+
+                    <picture class="photoA">
+                        <source media="max-width: 400px" srcset="/images/mcbain3-org-200.webp">
+                        <source media="max-width: 1000px" srcset="/images/mcbain3-org-500.webp">
+                        <source media="max-width: 1600px" srcset="/images/mcbain3-org-800.webp">
+                        <img class="lazy" img src="/images/mcbain3-1200.webp" alt="McBaine Burr Oak"tr=w-300,h-400>
+                        </picture>
               </div>
 
               <div class="card">
@@ -173,7 +189,7 @@
             </div>
           </div>
     </div>
-</body>
+</div>
 </main>
 <footer>
     <section class="logo">

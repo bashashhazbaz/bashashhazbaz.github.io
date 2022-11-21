@@ -6,6 +6,7 @@ hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive'
 // To solve the mid resizing issue with responsive class on
 window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
 
+
 /*** Programming Notes **************************************
   Arrow Functions - es6 syntactically compact alternative to a regular function expression
   see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -213,7 +214,7 @@ document.getElementById("HiddenField1").value=str;
 
 //function convertion(val) {
   //return (val - 273).toFixed(2);
-}
+//}
 //Now we have to collect all the information with the help of fetch method
 
 
@@ -427,3 +428,34 @@ function displayResults(data) {
     weathericon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     weathericon.alt = desc;
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
