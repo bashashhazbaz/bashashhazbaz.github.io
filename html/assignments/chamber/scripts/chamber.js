@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 const hambutton = document.querySelector('.ham');
 const mainnav = document.querySelector('.navigation')
 
@@ -5,6 +15,9 @@ hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive'
 
 // To solve the mid resizing issue with responsive class on
 window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
+
+
+
 
 
 /*** Programming Notes **************************************
@@ -45,6 +58,25 @@ const fulldateUK = new Intl.DateTimeFormat("en-UK", {
 datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
 
 
+const date = document.querySelector("#currentyr");
+// Try to complete the method with options
+try {
+	const options = {
+		//weekday: "long",
+		//day: "numeric",
+		//month: "long",
+		year: "numeric"
+	};
+	date.innerHTML = `<span class="highlight">${new Date().toLocaleDateString("en-US", options)}</span>`;
+} catch (e) {
+	alert("Error with code or your browser does not support Locale");
+}
+
+document.getElementById('modify').innerHTML = document.lastModified
+document.getElementById("TextBox1").value=str;
+document.getElementById("HiddenField1").value=str;
+
+
 
 //var banner = weekday; 
 // {/
@@ -79,6 +111,13 @@ datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
 
 //}
 
+const subTime = document.querySelector("#submissionTime");
+
+subTime.value = new Date();
+
+
+
+
 const d = new Date();
 let day = d.getDay()
 
@@ -94,6 +133,12 @@ else {
 
 
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
+
+
+
+
+
 
 //function .getWeather(city, callback) {
   //var url = 'http://api.openweathermap.org/data/2.5/weather';
@@ -112,23 +157,29 @@ else {
 
 
 
-const date = document.querySelector("#currentyr");
+//const date = document.querySelector("#currentyr");
 // Try to complete the method with options
-try {
-	const options = {
+//try {
+	//const options = {
 		//weekday: "long",
 		//day: "numeric",
 		//month: "long",
-		year: "numeric"
-	};
-	date.innerHTML = `<span class="highlight">${new Date().toLocaleDateString("en-US", options)}</span>`;
-} catch (e) {
-	alert("Error with code or your browser does not support Locale");
-}
+		//year: "numeric"
+	//};
+	//date.innerHTML = `<span class="highlight">${new Date().toLocaleDateString("en-US", options)}</span>`;
+//} catch (e) {
+	//alert("Error with code or your browser does not support Locale");
+//}
 
-document.getElementById('modify').innerHTML = document.lastModified
-document.getElementById("TextBox1").value=str;
-document.getElementById("HiddenField1").value=str;
+//document.getElementById('modify').innerHTML = document.lastModified
+//document.getElementById("TextBox1").value=str;
+//document.getElementById("HiddenField1").value=str;
+
+
+
+
+
+
 
 //function getWeather(position, callback) {
   //var lat = position.coords.latitude;
@@ -295,7 +346,9 @@ document.getElementById("HiddenField1").value=str;
 
 //windchill.innerHTML = `Wind Chill: <span>${calculateWindchill}<span>`;
 
-const requestURL = 'https://github.com/bashashhazbaz/bashashhazbaz.github.io/blob/main/html/assignments/lesson9/data.json';
+//const requestURL = 'https://github.com/bashashhazbaz/bashashhazbaz.github.io/blob/main/html/assignments/lesson9/data.json';
+const requestURL = '';
+
 const cards = document.querySelector('.cards');
 
 async function getBusiness() {
@@ -459,3 +512,6 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", lazyload);
   window.addEventListener("orientationChange", lazyload);
 });
+
+
+

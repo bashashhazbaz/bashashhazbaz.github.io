@@ -172,8 +172,13 @@
                 <legend>Primary Contact</legend>
                 <label class="top">First Name*<input type="text" name="fname" required></label>
                 <label class="top">Last Name*<input type="text" name="lname" required></label>
-                <label class="top">Business Title*<input type="text" name="title" required></label>
-                <label class="top">Primary Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label class="top">Business Title*<input type="text" placeholder="letters, hyphens, and spaces only, minimum 7 characters"
+                    pattern="[A-Za-z\s-]{7,}" name="positionTitle" required></label>
+                    <label id="hidden">
+                        <input type="hidden" id="submissionTime" name="submissionTime" />
+                      </label>
+                
+                    <label class="top">Primary Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
                 <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
                 <label class="top">Website<input type="url" name="url" placeholder="https://"></label>
             </fieldset>
@@ -200,10 +205,10 @@
                 <label>
             </fieldset-->
             <span>
-                <asp:HiddenField ID="HiddenField1" runat="server" />
+                <asp:HiddenField id="HiddenField1" runat="server" />
                 <span id="clienttime"></span>
-                <asp:TextBox ID="TextBox1" runat="server" Width="700px"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" OnClientClick="setTime();" />
+                <asp:TextBox id="TextBox1" runat="server" Width="700px"></asp:TextBox>
+                <asp:Button id="Button1" runat="server" Text="Button" OnClick="Button1_Click" OnClientClick="setTime();" />
             </span>
 
             <input type="submit" value="Join Now" class="submitBtn">
@@ -234,6 +239,6 @@
     </span>
 </p></footer>
 <!--script src="/scripts/main.js"></script-->
-<script src="/html/assignments/chamber/scripts/chamber.js"></script>
+<script src="/html/assignments/chamber/scripts/chamber2.js"></script>
 </body>
 </html>
