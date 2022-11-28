@@ -79,25 +79,18 @@
     
     <div class="wrap">
         <div class="one">
-            <section class="container-fluid">
-                <section class="main">
-                  <section class="inputs">
-                    <input type="text" placeholder="Enter any city..." id="cityinput" />
-                    <input type="submit" value="Submit" id="add" />
-                    <button placeholder="submit" id="add"></button>
-                  </section>
-           
-                  <section class="display">
-                    <section class="wrapper">
-                        <picture class="logo"><img src="/mcbaine/icons/Weather-Chance-Of-Storm-icon.webp"></picture>
-                      <h2 id="cityoutput"></h2>
-                      <p id="description"></p>
-                      <p id="temp"></p>
-                      <p id="wind"></p>
-                      <p id="windchill"></p>
-                    </section>
-                  </section>
-                </section>
+            <div class="card">
+                <h2>McBaine, Missouri</h2>
+                <p></p>
+        <p>The current temperature is <span id="temperature"></span>&deg;F.</p>
+        <p>The current conditions are: <span id="currently"></span></p>
+
+        <figure>
+            <img src="" alt="" id="weathericon">
+            <figcaption></figcaption>
+        </figure>
+              </p>
+            </div>
               </div>
               <!--p class="weather" MCBAINE WEATHER-->
                 <!--a class="weatherwidget-io" <href="https://forecast7.com/en/38d89n92d45/mcbaine/?unit=us"data-label_1="MCBAINE"data-label_2="WEATHER"data-theme="original">MCBAINE WEATHER</a-->
@@ -239,5 +232,6 @@
 </p></footer>
 <!--script src="/scripts/main.js"></script-->
 <script src="/html/assignments/chamber/scripts/chamber2.js"></script>
+<script src="/html/assignments/lesson10/weather.js"></script>
 </body>
 </html>
