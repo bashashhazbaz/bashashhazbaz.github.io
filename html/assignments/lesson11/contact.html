@@ -85,10 +85,10 @@
     
     
     <main id="form">
-        <h1 id="member">New Chamber Membership Investment Form</h1>
-          <form id="form1" runat="server" method="get" action="/html/assignments/lesson8/thankyou.html">
+        <h1 id="member">Contact Us</h1>
+          <form id="form1" runat="server" method="get" action="/html/assignments/lesson11/contactthanks.html">
             
-            <fieldset>
+            <!--fieldset>
                 
                 <legend>Select An Option</legend>
                 
@@ -153,37 +153,40 @@
                       </table>
 
 
-                <!--div>Software Needed</div>
-                <label class="sbs"><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+                <!-div>Software Needed</div-->
+                <!--label class="sbs"><input type="checkbox" name="editing" value="yes">Photo Editing</label>
                 <label class="sbs"><input type="checkbox" name="code" value="yes">Coding</label>
                 <label class="sbs"><input type="checkbox" name="process" value="yes">Preprocessor</label>
                 <label class="sbs"><input type="checkbox" name="client" value="yes">FTP Client</label-->  
-            </fieldset>
+            <!--/fieldset-->
 
-            <fieldset>
-                <legend>Member Information</legend>
+            <!--fieldset>
+                <!legend>Member Information</legend>
                 <label class="top">Business Name*<input type="text" name="fname" required></label>
                 <label class="top">Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
                 <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
                 <label class="top">Website<input type="url" name="url" placeholder="https://"></label>
-                <label class="top">Business Description<!--input type="text" name="text" ></label-->
-                <textarea id="freeform" name="freeform" rows="4" cols="50" maxlength="200"></textarea></label>
+                <label class="top">Business Description<!-input type="text" name="text" ></label-->
+                <!--textarea id="freeform" name="freeform" rows="4" cols="50" maxlength="200"></textarea></label>
 
-            </fieldset>
+            </fieldset-->
 
             <fieldset>
-                <legend>Primary Contact</legend>
+                <!--legend>Primary Contact</legend-->
                 <label class="top">First Name*<input type="text" name="fname" required></label>
                 <label class="top">Last Name*<input type="text" name="lname" required></label>
-                <label class="top">Business Title*<input type="text" placeholder="letters, hyphens, and spaces only, minimum 7 characters"
+                <!--label class="top">Business Title*<input type="text" placeholder="letters, hyphens, and spaces only, minimum 7 characters"
                     pattern="[A-Za-z\s-]{7,}" name="positionTitle" required></label>
                     <label id="hidden">
                         <input type="hidden" id="submissionTime" name="submissionTime" />
-                      </label>
+                      </label-->
                 
                     <label class="top">Primary Phone*<input type="tel" name="phone" placeholder="1235551234" required></label>
                 <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                <label class="top">Website<input type="url" name="url" placeholder="https://"></label>
+                <!--label class="top">Website<input type="url" name="url" placeholder="https://"></label-->
+                <br>
+                <label class="top">Leave a comment<textarea id="freeform" name="freeform" rows="4" cols="50" maxlength="200"></textarea></label>
+
             </fieldset>
             
     
@@ -214,7 +217,7 @@
                 <asp:Button id="Button1" runat="server" Text="Button" OnClick="Button1_Click" OnClientClick="setTime();" />
             </span>
 
-            <input type="submit" value="Join Now" class="submitBtn">
+            <input type="submit" value="Contact Us" class="submitBtn">
     
           </form>  
     
