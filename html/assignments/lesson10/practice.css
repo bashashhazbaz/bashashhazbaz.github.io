@@ -548,7 +548,7 @@ form label.top input, form label.top select, form label.top textarea {
     padding: .75rem;
     color: #555;
     width: 100%;
-    max-width: 20rem;
+    max-width: 60rem;
     background-color: #e0d289;
 
 }

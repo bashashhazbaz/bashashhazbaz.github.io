@@ -443,7 +443,7 @@ main picture.photoA div, main picture.photoB div {
 	grid-column: 2 / 3;
 }
 
-.menu {
+/*.menu {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
@@ -503,7 +503,7 @@ section {
 
 .list section img {
 	display: none; /* smaller viewports only */
-}
+/*}
 
 section h3 {
 	font-size: 1.5rem;
@@ -517,7 +517,7 @@ section a {
 img {
 	height: 75px;
 	max-width: 100%; /* Images are jerks - Seattle*/
-}
+/*}
 
 /*.right-sidebar {
 	grid-column: 3 / 4;
