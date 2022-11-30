@@ -440,7 +440,7 @@ main picture.photoA div, main picture.photoB div {
 	margin: 1rem auto;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
-	background-color: #bbb;
+	background-color: #ccbb66;
 	text-align: center;
 }
 
@@ -463,6 +463,10 @@ section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	align-items: center;
+}
+
+#flex {
+	display: flex;
 }
 
 .list {
@@ -517,6 +521,7 @@ figure {
 	justify-content: center;
 
 }
+
 
 /*----------- FORM ----------------*/
 form fieldset {
