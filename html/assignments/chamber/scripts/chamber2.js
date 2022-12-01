@@ -52,7 +52,7 @@ try {
 }
 
 document.getElementById('modify').innerHTML = document.lastModified
-document.getElementById("TextBox1").value=str;
+//document.getElementById("TextBox1").value=str;
 document.getElementById("HiddenField1").value=str;
 
 
