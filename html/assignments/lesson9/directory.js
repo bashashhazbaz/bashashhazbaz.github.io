@@ -1,4 +1,4 @@
-const requestURL = 'https://github.com/bashashhazbaz/bashashhazbaz.github.io/blob/main/html/data.json';
+const requestURL = 'https://bashashhazbaz.github.io/html/assignments/lesson9/data.json';
 const cards = document.querySelector('.cards');
 
 async function getBusiness() {
