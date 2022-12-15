@@ -64,6 +64,11 @@ function displayBusiness(business) {
 const filteredArray = array.filter(item => Object.keys(filters).every(key => item[key] === filters[key]))
 console.log('filteredArray', filteredArray);
 
+//const membership = ['gold','silver','bronze','blue'];
+//checkmembership = membership.filter(membership => membership > gold);
+
+//console.log(checkmembership); // [ 2015, 2020 ]
+
 
     
     //const arr1 = data.filter(d => d.membership === 'gold');
