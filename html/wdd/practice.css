@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  min-width: 320px;
+  max-width: 480px;
+  align-content: center; }
+
+html {
+  -webkit-locale: "en";
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  display: grid;
+  grid-column: 1 / 4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  margin: 0 auto; }
+
+header {
+  display: block;
+  font-family: "Lora", serif; }
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; }
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none; }
+
+nav {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  border-style: solid none solid none;
+  border-width: 2px;
+  border-color: #d0d0d0; }
+  nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none;
+    text-align: center; }
+  nav li {
+    display: list-item;
+    text-align: center;
+    margin-bottom: 1em;
+    width: 33%;
+    color: #666;
+    float: right; }
+  nav a {
+    display: block;
+    width: 100%; }
+  nav a:visited {
+    color: #666; }
+  nav a:hover {
+    color: #00ddff; }
+  nav li.active a {
+    color: #DEB887; }
+
+h2 {
+  font-family: "Lora", serif;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold; }
+
+h2 a {
+  margin-top: 1em; }
+
+.post-date {
+  text-align: right;
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: #d0d0d0;
+  padding: 1em; }
+
+section {
+  display: block; }
+
+figure {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px; }
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip; }
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; }
+
+@media only screen and (max-width: 1175px) and (max-width: 960px) {
+  .foo {
+    width: 20%; } }
+@media only screen and (max-width: 1175px) and (max-width: 960px) {
+  .foo {
+    width: 40%; } }
+@media only screen and (max-width: 1175px) and (max-width: 768px) {
+  .foo {
+    width: 60%; } }
+@media only screen and (max-width: 1175px) and (max-width: 640px) {
+  .foo {
+    width: 80%; } }
+@media only screen and (max-width: 1175px) and (max-width: 400px) {
+  .foo {
+    width: 100%; } }
+
+@media only screen and (max-width: 1175px) {
+  .foo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+
+  .foo-parent {
+    position: relative; }
+
+  nav {
+    display: flex;
+    text-align: right; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between; }
+
+  main {
+    display: grid;
+    column-count: 4; }
+
+  .post-date {
+    float: left; }
+
+  .post-content {
+    float: right; } }
+/* end of media query */
+/* The active states are missing. 
+The font states are incorrect for the title. 
+The date is in the wrong spot. 
+The desktop view is missing (Not Responsive). 
+There are lots of validation errors. 
+Some are missing semicolons. 
+    html (Attributes Style) { = This doesn't make sense. 
+    @media only screen and (width: 100%; max-width: 1024px) { = This should be just max-width. 
+    The errors 
+    20 Parse Error html (Attributes Style) 
+    { -webkit-locale: "en"; -webkit-text-size-adjust: 100%; 
+        -ms-text-size-adjust: 100%;
+        /* display: grid; grid-column: 1 / 4*/
+/*column-width: 400px;*/
+                             /*} 
+33 body Missing a semicolon before the property name font-family 
+38 body Missing a semicolon before the property name margin 
+220 img Property overflow-clip-margin doesn't exist : content-box 
+236 Parse Error 100%; 
+284 Parse Error max-width: 1024px) 
+{ /*----------- BODY --------------*/
+/*----------- HEADER --------------*/
+/*----------- NAVIGATION --------------*/
+                                              /*
+nav {display:flex; text-align: right; } 
+ul { list-style:none; display:flex; justify-content:space-between; } 
+/*li { display: flex; flex: 1 1 auto; text-align: right; }*/
+/*nav ul li a { text-align: right; }*/
+/*----------- MAIN --------------*/
+                                    /*
+main { display: grid; column-count: 4; } 
+.post-date { float: left;. /* grid-column: 1 / 2*/
+                                                   /*} 
+.post-content { float: right; /* grid-column: 2 / 4*/
+/* } }*/
+
+/*# sourceMappingURL=practice.css.map */

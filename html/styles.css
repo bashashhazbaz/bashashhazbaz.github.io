@@ -1,0 +1,101 @@
+body {
+  background-color: darkred; }
+
+h1 {
+  color: white; }
+
+fieldset {
+  border-color: blue;
+  background-color: #d6bb81; }
+
+#contactform {
+  background-color: white;
+   /* @media (min-width: $breakpoint-small) {
+       & {
+          width: 90%;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto; 
+        } 
+    }
+
+    @media (max-width: $breakpoint-med-small) {
+        & {
+           width: 70%;
+           max-width: 900px;
+           margin-left: auto;
+           margin-right: auto; 
+         } 
+     }*/ }
+  #contactform input, #contactform textarea {
+    background-color: white;
+    flex: 2; }
+
+/*@include media(">phone", "<tablet") {
+}
+
+@include media(">tablet", "<950px") {
+}*/
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap; }
+
+/*fieldset > div {
+    @include flex-container(row, wrap);        
+}*/
+/*.center {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+/* @mixin center ($width, $max-width) {
+   width: 90%;
+   max-width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+ #content {
+     @include center;
+ }*/
+@media screen and (max-width: 960px) {
+  .foo {
+    width: 20%; } }
+@media screen and (max-width: 960px) {
+  .foo {
+    width: 40%; } }
+@media screen and (max-width: 768px) {
+  .foo {
+    width: 60%; } }
+@media screen and (max-width: 640px) {
+  .foo {
+    width: 80%; } }
+@media screen and (max-width: 400px) {
+  .foo {
+    width: 100%; } }
+
+.foo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.foo-parent {
+  position: relative; }
+
+/*body {
+    background: white;
+    @include breakpoint(large) { background: red; }
+    @include breakpoint(medium) { background: cyan; }
+    @include breakpoint(small) { background: green; }
+    @include breakpoint("max-width: 480px") { background: yellow; }
+    }*/
+
+/*# sourceMappingURL=styles.css.map */

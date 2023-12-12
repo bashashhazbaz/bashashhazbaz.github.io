@@ -1,0 +1,296 @@
+//variables
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+$fontfamily: 'Lora', serif;
+$fontfamily2: Arial, Helvetica;
+
+@mixin link__a {
+  a {
+    display: block;
+    width: 100%; 
+  }
+
+  a:visited {
+    color: #666;
+  }
+
+  a:hover {
+    color: #00ddff;
+  }
+  li.active a {
+    color: #DEB887;
+  }
+}
+
+$breakpoint-small: 640px !default; 
+$breakpoint-med-small: 768px !default; 
+$breakpoint-med: 960px !default; 
+$breakpoint-med-large: 1024px !default;
+$breakpoint-large: 1175px !default;
+
+
+
+
+
+* {
+    box-sizing: border-box;
+	  margin: auto;
+	  padding: 0;
+    min-width: 320px;max-width: 480px;
+    align-content: center;
+}
+
+html {
+    -webkit-locale: "en";
+    -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+}
+
+body {
+    display: flex;
+    //grid-column: 1 / 4;
+    font-family: $fontfamily2, sans-serif;
+    color: #333;
+    //grid-template: auto 1fr auto / auto 1fr auto;
+    margin: 0 auto;
+}
+
+header {
+    display: block;
+    font-family: $fontfamily;
+
+    --title {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+
+    __nav {
+        display: flex;
+        justify-items: center;
+        width: 100%;
+        margin: 20px 0;
+        border-style: solid none solid none;
+        border-width: 2px;
+        border-color: #d0d0d0;
+        
+    
+    
+        __ul {
+        width: 100%; 
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style-type: none;
+        text-align: center;
+        
+        }
+    
+            __li {
+            display: list-item;
+            text-align: center;
+            text-decoration: none;
+            justify-items: center;
+            margin-bottom: 1em;
+            width: 33%;
+            color:#666;
+            float: right;
+            }
+}
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+main {
+    __article {
+      
+        
+        __post-date {
+            font-family: $fontfamily;
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            text-align: right;
+            border-style: none none solid none;
+            border-width: 2px;
+            border-color: #d0d0d0;
+            padding: 1em;
+        }
+
+        __post-content {
+            display: block;
+        }
+    }
+
+    __title {
+        font-family: $fontfamily;
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+
+        __link {
+            margin-top: 1em; 
+        }
+    }
+
+    __figure {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 40px;
+        margin-inline-end: 40px;
+    }
+
+    __img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+
+    __p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    __link {
+       @include link__a()
+    }
+  }
+
+
+//nested nav variables
+
+
+    
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1175px) {
+
+    @mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+        @if $size == 'small' {
+          @media screen and ($type + -width: $breakpoint-small) {
+              @content;
+          }
+        }
+        @else if $size == 'med-small' {
+          @media screen and ($type + -width: $breakpoint-med-small) {
+              @content;
+          }
+        }
+        @else if $size == 'med' {
+          @media screen and ($type + -width: $breakpoint-med) {
+              @content;
+          }
+        }
+       @else if $size == 'large' {
+          @media screen and ($type + -width: $breakpoint-med) {
+              @content;
+          }
+        }
+        @else if $size == 'custom' {
+          @media screen and ($type + -width: $pixels + px) {
+           @content;
+          }
+        }
+        @else {
+          @content;
+        }
+      }
+    
+      .foo {
+        @include screen(large) {
+          width: 20%;
+        }
+        @include screen(med) {
+          width: 40%;
+        }
+        @include screen(med-small) {
+          width: 60%;
+        }
+        @include screen(small) {
+          width: 80%;
+        }
+        @include screen(custom, max, 400) {
+          width: 100%;
+        }
+      }
+    
+      @mixin center($position) {
+        position: absolute;
+        
+        @if $position == 'vertical' {
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        @else if $position == 'horizontal' {
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translate(-50%);
+        }
+        @else if $position == 'both' {
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+      }
+      .foo {
+        @include center(both);
+      }
+      .foo-parent {
+        position: relative;
+      }
+
+nav {display: grid; 
+            text-align: right;
+
+        ul {
+            list-style: none;
+            display: grid; 
+            justify-content: space-between;
+}
+}     
+    
+main  {
+        display: grid;
+        column-count: 4;
+}
+.post-date {
+        float: left;
+}
+.post-content {
+        float: right;
+}    
+} 
+/* end of media query */

@@ -1,0 +1,199 @@
+//variables will follow
+
+//colors
+$body-background-color: darkred;
+$form-background-color: white;
+$input-color: white;
+$headlines-color : white;
+$fieldset-border-color: blue;
+$fieldset-background-color: #d6bb81;
+
+
+$breakpoint-small: 640px !default; 
+$breakpoint-med-small: 768px !default; 
+$breakpoint-med: 960px !default; 
+$breakpoint-med-large: 1024px !default;
+$breakpoint-large: 1175px !default;
+
+$width: 100%;
+$max-width: 960px !default;
+
+
+
+body {
+    background-color: $body-background-color;
+              
+}
+
+h1 {color: $headlines-color;}
+fieldset {border-color: $fieldset-border-color; background-color: $fieldset-background-color;}
+
+#contactform {
+    background-color: $form-background-color;
+    
+    input, textarea {
+        background-color: $input-color;
+        
+        flex: 2;
+    }
+   /* @media (min-width: $breakpoint-small) {
+       & {
+          width: 90%;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto; 
+        } 
+    }
+
+    @media (max-width: $breakpoint-med-small) {
+        & {
+           width: 70%;
+           max-width: 900px;
+           margin-left: auto;
+           margin-right: auto; 
+         } 
+     }*/
+}
+/*@include media(">phone", "<tablet") {
+}
+
+@include media(">tablet", "<950px") {
+}*/
+
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+fieldset > div {
+    @include flex-container(column);        
+}
+/*fieldset > div {
+    @include flex-container(row, wrap);        
+}*/
+/*.center {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+ /* @mixin center ($width, $max-width) {
+    width: 90%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #content {
+      @include center;
+  }*/
+
+  @mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+    @if $size == 'small' {
+      @media screen and ($type + -width: $breakpoint-small) {
+          @content;
+      }
+    }
+    @else if $size == 'med-small' {
+      @media screen and ($type + -width: $breakpoint-med-small) {
+          @content;
+      }
+    }
+    @else if $size == 'med' {
+      @media screen and ($type + -width: $breakpoint-med) {
+          @content;
+      }
+    }
+   @else if $size == 'large' {
+      @media screen and ($type + -width: $breakpoint-med) {
+          @content;
+      }
+    }
+    @else if $size == 'custom' {
+      @media screen and ($type + -width: $pixels + px) {
+       @content;
+      }
+    }
+    @else {
+      @content;
+    }
+  }
+
+  .foo {
+    @include screen(large) {
+      width: 20%;
+    }
+    @include screen(med) {
+      width: 40%;
+    }
+    @include screen(med-small) {
+      width: 60%;
+    }
+    @include screen(small) {
+      width: 80%;
+    }
+    @include screen(custom, max, 400) {
+      width: 100%;
+    }
+  }
+
+  @mixin center($position) {
+    position: absolute;
+    
+    @if $position == 'vertical' {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    @else if $position == 'horizontal' {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translate(-50%);
+    }
+    @else if $position == 'both' {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+  .foo {
+    @include center(both);
+  }
+  .foo-parent {
+    position: relative;
+  }
+
+  //set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+@mixin breakpoint($break) {
+@if $break == large {
+@media (max-width: $break-large) { @content; }
+}
+@else if $break == medium {
+@media (max-width: $break-medium) { @content; }
+}
+@else if $break == small {
+@media (max-width: $break-small) { @content; }
+} @else {
+@media ($break) { @content; }
+}
+}               
+      
+/*body {
+    background: white;
+    @include breakpoint(large) { background: red; }
+    @include breakpoint(medium) { background: cyan; }
+    @include breakpoint(small) { background: green; }
+    @include breakpoint("max-width: 480px") { background: yellow; }
+    }*/
+
